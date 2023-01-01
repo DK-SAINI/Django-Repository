@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>OTP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,700&display=swap"
+          rel="stylesheet">
+    <style type="text/css">
+
+        body,
+        table,
+        td,
+        a {
+            -ms-text-size-adjust: 100%; /* 1 */
+            -webkit-text-size-adjust: 100%; /* 2 */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /**
+         * Remove extra space added to tables and cells in Outlook.
+         */
+        table,
+        td {
+            mso-table-rspace: 0pt;
+            mso-table-lspace: 0pt;
+        }
+
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+
+        a[x-apple-data-detectors] {
+            font-family: inherit !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+
+        body {
+            width: 100% !important;
+            height: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        /**
+         * Collapse table borders to avoid space between cells.
+         */
+        table {
+            border-collapse: collapse !important;
+        }
+
+        a {
+            color: #1a82e2;
+        }
+
+        img {
+            height: auto;
+            line-height: 100%;
+            text-decoration: none;
+            border: 0;
+            outline: none;
+        }
+
+
+    </style>
+
+</head>
+<body style="background-color: #e9ecef;">
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="vertical-align: middle;height: 100vh">
+    <tr>
+        <td align="center" bgcolor="#e9ecef">
+
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                <tr>
+                    <td align="center" bgcolor="#ffffff" style="padding:12px;background: #bbecff">
+                        <img src="https://www.freepnglogos.com/uploads/email-png/blue-email-box-circle-png-transparent-icon-2.png"
+                             width="100" style="max-width: 250px">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#ffffff" style="padding:32px 24px 0;">
+                        <h1 style="margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -1px; line-height: 48px;">
+                        OTP
+                        </h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#ffffff" style="padding:12px 24px 32px; font-size: 16px;font-weight: 400; line-height: 24px;">
+                        <p style="margin: 0;">
+                            <span>Hello, <b>{{ user.first_name }} {{ user.last_name }}</b> </span>
+                            kindly use this otp <b>{{ otp }}</b>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <section id="plan_description" style="margin-top:100px ;">
+        <h3 style="text-align: center;">Test Subscription Plan</h3>
+    </section>
+    <br/>
+    <section id="pricing">
+      <div class="container">
+        <div class="row">
+            {% if plan_list %}
+                {% for plan in plan_list reversed %}
+
+                    <div class="col-md-4">
+                      <div class="card">
+                        <div class="card-header">
+                          <h3>{{ plan.name }}</h3>
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title">{{ plan.metadata.price }}</h4>
+                          <p class="card-text"></p>
+                          <a href="{% url 'checkout' id=plan.id %}" class="btn btn-success ml-auto">
+                            Buy Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                {% endfor %}
+            {% else %}
+            <!-- If Strip Product List Return Empty Then show Dummy Product -->
+                <div class="col-md-4">
+                    <div class="card">
+                      <div class="card-header">
+                        <h3>Silver</h3>
+                      </div>
+                      <div class="card-body">
+                        <h4 class="card-title">$50/month</h4>
+                        <p class="card-text">{{ error }}</p>
+                        <a href="#" class="btn btn-primary">Sign Up</a>
+                      </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+      </div>
+    </section>
+    <br/>
+    <br/>
+{% endblock %}

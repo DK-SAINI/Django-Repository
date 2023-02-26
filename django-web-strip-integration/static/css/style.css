@@ -1,0 +1,42 @@
+/* Custom styles for the base template */
+
+/* Set the height of the header to a fixed value */
+header {
+  height: 80px;
+}
+
+/* Center the navbar brand */
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Style the navbar links */
+.navbar-nav .nav-link {
+  color: #212529;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0275d8;
+}
+
+/* Style the content section */
+.container {
+  max-width: 800px;
+}
+
+/* Style the social media icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #212529;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: #0275d8;
+}
